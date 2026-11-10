@@ -61,3 +61,8 @@ MediaWiki API 拉原文 → 人工选篇（常青教程优先，新闻时效类�
 ```
 
 选篇优先级：越狱/固件 > 词典制作 > KOReader 等阅读软件配置 > 格式知识。
+
+### 截图约定
+
+原文截图下载到 `public/images/<分类>/<页面>/`（不热链），正文用 `<Figure>` 组件引用，
+`source` 必填以渲染图注里的出处——细节见 `public/images/README.md`。
