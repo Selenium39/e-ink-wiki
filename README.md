@@ -1,40 +1,61 @@
-# e-ink-wiki
+# E-ink Wiki
 
-电纸书中文教程库，目标域名 **wiki.e-ink.me**。
+电纸书中文教程库 —— [wiki.e-ink.me](https://wiki.e-ink.me)
 
-内容精选翻译自 [MobileRead Wiki](https://wiki.mobileread.com/)（CC BY-NC-SA 3.0），
-覆盖 Kindle / Kobo 越狱、固件、词典制作、阅读器配置等电纸书深度教程。
+把 [MobileRead Wiki](https://wiki.mobileread.com/) 上的电纸书深度教程系统翻译成中文：
+Kindle / Kobo 越狱与救砖、固件与系统底层、词典制作、阅读软件配置、电子书格式。
+这类资料在中文世界长期空白，本站补上它。E-ink.me 主站的内容纵深板块。
 
-## 技术栈
+## 你能在这里读到什么
 
-- Next.js 16（`output: "export"` 静态导出，参考 iloveepub 形态）
-- Tailwind CSS 4 + typography 插件（正文排版）
-- gray-matter + next-mdx-remote（markdown 内容管线）
-- pnpm
+| 分类 | 内容 |
+| --- | --- |
+| Kindle | 5.x 软件越狱（PW2 / PW3 / KT2 / KT3 / KV / KOA）· Touch 越狱、救砖与备份 · 越狱包清单（25 个扩展）· 系统架构与底层访问 · 开发指南（工具链与自制包） |
+| Kobo | Touch 破解入门 · WiFi 破解入门 · eReader 常见问题（16 问） |
+| 词典 | 电纸书词典制作总览 |
+| 阅读软件 | KOReader 简介 |
+| 电子书格式 | EPUB 格式详解 · MOBI 格式详解 · 电子书 DRM 概览 |
 
-不使用第三方 wiki 框架：无在线协作编辑需求，内容版本管理即 git，
-wiki 的"形"（目录树/侧边栏/署名页脚）由组件实现。
+全部译文公开可访问：无登录墙，无广告。
 
-## 内容管线
+## 内容从哪来
 
-```
-MediaWiki API 拉取原文 → 人工选篇 → AI 翻译 → 人工校对 → 提交 content/
-```
+所有教程译自 MobileRead Wiki，原文以
+[CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/) 许可发布。
+相应地，本站的译文同样以该许可开放：
 
-- `content/<分类>/<页面>.md`，frontmatter 契约见 `src/lib/content.ts` 顶部注释
-- `original_author` / `source_url` 必填——驱动每页底部的 CC BY-NC-SA 3.0 署名页脚
+- **署名（BY）**：每个页面底部标注原作者（依原文修订历史整理）与原文地址
+- **非商业（NC）**：全站不挂广告，不放付费转化入口
+- **相同方式共享（SA）**：你可以自由转载、修改本站译文，前提是保持署名、
+  非商业、并以相同许可发布
 
-## 合规红线（见 CLAUDE.md）
+边界：只翻译 wiki 页面，不搬运 MobileRead 论坛帖子（论坛内容无开放许可）。
 
-1. **只翻译 wiki，不搬运论坛帖子**（论坛 UGC 无开放许可）
-2. **BY**：每页署名原作者与原文地址
-3. **NC**：wiki.e-ink.me 全站不挂广告、不放付费工具强转化 CTA（普通导航链接除外）
-4. **SA**：翻译内容同以 CC BY-NC-SA 3.0 开放，不设登录墙
+## 许可
 
-## 开发
+| 部分 | 许可 |
+| --- | --- |
+| `content/` 下的译文 | [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)（继承原文） |
+| 网站代码（`src/`、配置等） | [MIT](./LICENSE) |
+
+两者相互独立：使用译文遵守 CC BY-NC-SA 3.0，使用代码遵守 MIT。
+
+## 参与贡献
+
+- **纠错 / 改进译文**：提
+  [issue](https://github.com/Selenium39/e-ink-wiki/issues)
+  或直接 PR 修改 `content/` 下对应文件
+- **建议新篇目**：提 issue 并附原文页面链接（限 MobileRead Wiki）
+- 译文 frontmatter 契约见 `src/lib/content.ts` 顶部注释——缺署名或来源
+  非法时构建直接失败，这是刻意的（CC 署名义务是红线）
+
+## 本地开发
 
 ```bash
 pnpm install
 pnpm dev    # http://localhost:3000
-pnpm build  # 产物在 out/
+pnpm build  # 静态导出，产物在 out/
 ```
+
+Next.js 16（`output: "export"`）+ Tailwind CSS 4 + markdown 内容管线
+（gray-matter + next-mdx-remote），部署为纯静态站。
