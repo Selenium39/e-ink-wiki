@@ -15,11 +15,11 @@ function GithubMark({ className }: { className?: string }) {
 
 export const metadata: Metadata = {
   title: {
-    default: "E-ink Wiki — 电纸书中文 Wiki",
+    default: "E-ink Wiki — 电子书 Wiki",
     template: "%s — E-ink Wiki",
   },
   description:
-    "电纸书中文 Wiki：Kindle / Kobo 越狱、固件、词典制作、阅读软件配置、电子书格式等教程与资料，精选翻译 MobileRead Wiki 并收录本站原创。",
+    "电子书 Wiki：Kindle / Kobo / BOOX 阅读器越狱与配置、EPUB / MOBI / DRM 格式详解、词典制作、KOReader 等阅读软件教程，精选翻译 MobileRead Wiki 并收录本站原创。",
 };
 
 export default function RootLayout({

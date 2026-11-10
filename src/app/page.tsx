@@ -5,10 +5,10 @@ export default function Home() {
   const sections = getSidebarSections();
   return (
     <div className="prose prose-neutral dark:prose-invert mx-auto max-w-3xl">
-      <h1>电纸书中文 Wiki</h1>
+      <h1>电子书 Wiki</h1>
       <p>
-        电纸书设备的中文知识库：Kindle / Kobo
-        越狱、固件、词典制作、阅读软件配置、电子书格式等深度教程。
+        电子书知识库：阅读设备（Kindle / Kobo / BOOX）的越狱与配置、
+        电子书格式（EPUB / MOBI / DRM）、词典制作、阅读软件等深度教程。
         内容双轨——精选译自{" "}
         <a
           href="https://wiki.mobileread.com/"
@@ -17,7 +17,7 @@ export default function Home() {
         >
           MobileRead Wiki
         </a>{" "}
-        等英文社区，并逐步收录本站原创（中文排版、中文词典制作等英文社区缺失的主题）。
+        等英文社区，并逐步收录本站原创（BOOX 专题、中文排版、中文词典制作等英文社区缺失的主题）。
       </p>
       <p className="text-sm">
         翻译内容署名原作者、原创内容署名作者，均以{" "}

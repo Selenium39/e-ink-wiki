@@ -1,11 +1,11 @@
 # E-ink Wiki
 
-电纸书中文 Wiki —— [wiki.e-ink.me](https://wiki.e-ink.me)
+电子书 Wiki —— [wiki.e-ink.me](https://wiki.e-ink.me)
 
-电纸书设备的中文知识库：Kindle / Kobo 越狱与救砖、固件与系统底层、词典制作、
-阅读软件配置、电子书格式。内容双轨——精选翻译
+电子书知识库：阅读设备（Kindle / Kobo / BOOX）的越狱与配置、电子书格式
+（EPUB / MOBI / DRM）、词典制作、阅读软件。内容双轨——精选翻译
 [MobileRead Wiki](https://wiki.mobileread.com/) 的深度教程，并收录本站原创
-（中文排版、中文词典制作等英文社区缺失的主题）。
+（BOOX 专题、中文排版、中文词典制作等英文社区缺失的主题）。
 这类资料在中文世界长期空白，本站补上它。E-ink.me 主站的内容纵深板块。
 
 ## 你能在这里读到什么
@@ -13,6 +13,7 @@
 | 分类 | 内容 |
 | --- | --- |
 | Kindle | 5.x 软件越狱（PW2 / PW3 / KT2 / KT3 / KV / KOA）· Touch 越狱、救砖与备份 · 越狱包清单（25 个扩展）· 系统架构与底层访问 · 开发指南（工具链与自制包） |
+| BOOX | 电纸书入门总览（本站原创：产品线 / BOOXOS / NeoReader / 选购对比） |
 | Kobo | Touch 破解入门 · WiFi 破解入门 · eReader 常见问题（16 问） |
 | 词典 | 电纸书词典制作总览 |
 | 阅读软件 | KOReader 简介 |
