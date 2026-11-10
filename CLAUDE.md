@@ -40,6 +40,11 @@ e-ink.me 主站的内容纵深板块，独立仓库、独立子域 **wiki.e-ink.
   单段 `[slug]` 会生成 `kindle%2Fjailbreak`（URL 编码进文件名）；catch-all
   才能得到层级 URL `/wiki/kindle/jailbreak/`（2026-11-10 建骨架时踩过）
 
+## 开发约定
+
+- **每完成一个功能即提交并推送 `main`**：先确认 `tsc --noEmit`、`eslint .`、
+  `next build` 均通过再 commit，主分支不放不可构建的提交
+
 ## 部署（待办）
 
 - 域名 wiki.e-ink.me → CF → byos k3s ingress（或纯静态托管）
