@@ -45,9 +45,11 @@ Kindle / Kobo 越狱与救砖、固件与系统底层、词典制作、阅读软
 - **纠错 / 改进译文**：提
   [issue](https://github.com/Selenium39/e-ink-wiki/issues)
   或直接 PR 修改 `content/` 下对应文件
-- **建议新篇目**：提 issue 并附原文页面链接（限 MobileRead Wiki）
-- 译文 frontmatter 契约见 `src/lib/content.ts` 顶部注释——缺署名或来源
-  非法时构建直接失败，这是刻意的（CC 署名义务是红线）
+- **建议新篇目**：提 issue 并附原文页面链接（限 MobileRead Wiki）；
+  也欢迎原创篇目（中文排版、中文字体、中文词典等 MobileRead 没有的主题）
+- frontmatter 契约见 `src/lib/content.ts` 顶部注释——翻译篇
+  （`type: "translated"`，缺省）与原创篇（`type: "original"`）各有一套
+  必填字段，缺署名或来源非法时构建直接失败，这是刻意的（CC 署名义务是红线）
 
 ## 本地开发
 

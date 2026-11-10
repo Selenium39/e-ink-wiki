@@ -6,6 +6,13 @@ e-ink.me 主站的内容纵深板块，独立仓库、独立子域 **wiki.e-ink.
 精选翻译 MobileRead Wiki 的电纸书深度教程，填补中文社区空白，
 权威性反哺主站品牌；变现不在此站（主站付费工具承接转化）。
 
+内容定位升级（2026-11-10）：**精选翻译 + 中文原创**双轨——
+翻译篇之外逐步增加原创篇目（优先 MobileRead 没有的中文特有主题：
+中文排版/字体、中文词典制作、新机型现状），管线按 frontmatter
+`type: translated | original` 区分（契约见 `src/lib/content.ts` 顶部注释）。
+原创篇同以 CC BY-NC-SA 3.0 发布；多语言暂缓，等原创成规模后
+只给原创内容开英文版（翻译篇英文版无意义，英文读者读原文）。
+
 选址拍板（2026-11-10）：e-ink.me 而非 iloveepub.com——
 受众匹配（电纸书玩家）、老域名权重、AdSense 域级隔离、深度内容归深度站。
 
@@ -16,8 +23,9 @@ e-ink.me 主站的内容纵深板块，独立仓库、独立子域 **wiki.e-ink.
 
 1. **只碰 MobileRead Wiki**（CC BY-NC-SA 3.0，wiki.mobileread.com），
    **绝不搬运论坛帖子**（mobileread.com/forums，UGC 版权归发帖用户，无许可）
-2. **BY 署名**：每篇 frontmatter 必填 `original_author` + `source_url`，
-   页面底部自动渲染署名页脚（`src/components/LicenseFooter.tsx`）
+2. **BY 署名**：翻译篇 frontmatter 必填 `original_author` + `source_url`，
+   原创篇必填 `author`（且不得有 `source_url`），
+   页面底部自动渲染对应署名页脚（`src/components/LicenseFooter.tsx`）
 3. **NC 非商业**：本站不挂任何广告；不放付费工具强推销 CTA；
    header 指向 e-ink.me 的普通导航链接是允许边界
 4. **SA 相同方式共享**：翻译内容同以 CC BY-NC-SA 3.0 发布，
