@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
+import Analytics from "@/components/Analytics";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -34,6 +36,13 @@ export default function RootLayout({
           </div>
         </header>
         <main className="mx-auto max-w-6xl px-4 py-8">{children}</main>
+        {/* 自托管 umami 统计（无 cookie，主站同款） */}
+        <Script
+          src="https://umami.selenium39.me/script.js"
+          data-website-id="1d1fb9fa-b17e-4b56-8f34-bcf9b89143e4"
+          strategy="afterInteractive"
+        />
+        <Analytics />
         <footer className="border-t border-neutral-200 py-6 text-center text-xs text-neutral-500 dark:border-neutral-800 dark:text-neutral-400">
           E-ink Wiki · 教程内容译自 MobileRead Wiki（CC BY-NC-SA 3.0）· 本站不设广告
         </footer>
