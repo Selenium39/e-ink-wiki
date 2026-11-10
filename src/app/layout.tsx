@@ -15,11 +15,11 @@ function GithubMark({ className }: { className?: string }) {
 
 export const metadata: Metadata = {
   title: {
-    default: "E-ink Wiki — 电纸书中文教程库",
+    default: "E-ink Wiki — 电纸书中文 Wiki",
     template: "%s — E-ink Wiki",
   },
   description:
-    "电纸书中文教程库：Kindle / Kobo 越狱、固件、词典制作、阅读器配置等教程，译自 MobileRead Wiki 等社区。",
+    "电纸书中文 Wiki：Kindle / Kobo 越狱、固件、词典制作、阅读软件配置、电子书格式等教程与资料，精选翻译 MobileRead Wiki 并收录本站原创。",
 };
 
 export default function RootLayout({
@@ -62,7 +62,8 @@ export default function RootLayout({
         />
         <Analytics />
         <footer className="border-t border-neutral-200 py-6 text-center text-xs text-neutral-500 dark:border-neutral-800 dark:text-neutral-400">
-          E-ink Wiki · 教程内容译自 MobileRead Wiki（CC BY-NC-SA 3.0）· 本站不设广告 ·{" "}
+          E-ink Wiki · 内容以 CC BY-NC-SA 3.0 开放（精选译自 MobileRead
+          Wiki 及本站原创）· 本站不设广告 ·{" "}
           <a
             href="https://github.com/Selenium39/e-ink-wiki"
             target="_blank"

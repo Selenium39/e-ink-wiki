@@ -1,9 +1,11 @@
 # E-ink Wiki
 
-电纸书中文教程库 —— [wiki.e-ink.me](https://wiki.e-ink.me)
+电纸书中文 Wiki —— [wiki.e-ink.me](https://wiki.e-ink.me)
 
-把 [MobileRead Wiki](https://wiki.mobileread.com/) 上的电纸书深度教程系统翻译成中文：
-Kindle / Kobo 越狱与救砖、固件与系统底层、词典制作、阅读软件配置、电子书格式。
+电纸书设备的中文知识库：Kindle / Kobo 越狱与救砖、固件与系统底层、词典制作、
+阅读软件配置、电子书格式。内容双轨——精选翻译
+[MobileRead Wiki](https://wiki.mobileread.com/) 的深度教程，并收录本站原创
+（中文排版、中文词典制作等英文社区缺失的主题）。
 这类资料在中文世界长期空白，本站补上它。E-ink.me 主站的内容纵深板块。
 
 ## 你能在这里读到什么
@@ -16,11 +18,11 @@ Kindle / Kobo 越狱与救砖、固件与系统底层、词典制作、阅读软
 | 阅读软件 | KOReader 简介 |
 | 电子书格式 | EPUB 格式详解 · MOBI 格式详解 · 电子书 DRM 概览 |
 
-全部译文公开可访问：无登录墙，无广告。
+全部内容公开可访问：无登录墙，无广告。
 
 ## 内容从哪来
 
-所有教程译自 MobileRead Wiki，原文以
+翻译篇译自 MobileRead Wiki，原文以
 [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/) 许可发布。
 相应地，本站的译文同样以该许可开放：
 
