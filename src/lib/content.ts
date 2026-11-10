@@ -1,21 +1,23 @@
 import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
+import { DEFAULT_LOCALE, LOCALES, type Locale } from "@/lib/i18n";
 
 /**
- * 内容管线：content/ 下的 markdown 即 wiki 页面。
+ * 内容管线：content/<lang>/<分类>/<页面>.md 即 wiki 页面（按语言分仓，
+ * 同 slug 跨语言对齐；默认语言 en 无 URL 前缀，zh/es 带前缀）。
  *
  * frontmatter 契约（LicenseFooter 依赖），按 type 分两套：
  *
  * 翻译篇（type: "translated"，缺省值，向后兼容）：
- *   title            页面标题（中文）
+ *   title            页面标题（目标语言）
  *   original_title   原文标题
  *   source_url       原文地址 https://wiki.mobileread.com/wiki/...
  *   original_author  原作者（CC BY 署名义务，必填）
  *   translated_at    翻译日期 YYYY-MM-DD
  *
  * 原创篇（type: "original"）：
- *   title            页面标题（中文）
+ *   title            页面标题（目标语言）
  *   author           原创作者（必填——原创也要署名）
  *   原创篇不应出现 source_url（原创不是翻译，参考链接写进正文）
  *
@@ -44,6 +46,7 @@ export interface WikiFrontmatter {
 
 export interface WikiPage {
   slug: string; // 相对路径去掉扩展名，如 "kindle/jailbreak"
+  lang: Locale; // 所属语言
   section: string; // 一级目录名
   frontmatter: WikiFrontmatter;
   content: string;
@@ -130,17 +133,20 @@ function walk(dir: string, base = ""): string[] {
   return files;
 }
 
-export function getAllPages(): WikiPage[] {
-  if (!fs.existsSync(CONTENT_DIR)) return [];
+/** 读取某语言全部页面；校验错误跨语言汇总后一次性抛出 */
+export function getAllPages(lang: Locale = DEFAULT_LOCALE): WikiPage[] {
+  const langDir = path.join(CONTENT_DIR, lang);
+  if (!fs.existsSync(langDir)) return [];
 
   const errors: string[] = [];
-  const pages = walk(CONTENT_DIR).map((rel) => {
-    const raw = fs.readFileSync(path.join(CONTENT_DIR, rel), "utf-8");
+  const pages = walk(langDir).map((rel) => {
+    const raw = fs.readFileSync(path.join(langDir, rel), "utf-8");
     const { data, content } = matter(raw);
     const frontmatter = data as WikiFrontmatter;
-    errors.push(...frontmatterErrors(rel, frontmatter));
+    errors.push(...frontmatterErrors(`${lang}/${rel}`, frontmatter));
     return {
       slug: rel.replace(/\.(md|mdx)$/, ""),
+      lang,
       section: rel.split("/")[0],
       frontmatter,
       content,
@@ -162,8 +168,11 @@ export function getAllPages(): WikiPage[] {
   );
 }
 
-export function getPageBySlug(slug: string): WikiPage | undefined {
-  return getAllPages().find((p) => p.slug === slug);
+export function getPageBySlug(
+  lang: Locale,
+  slug: string,
+): WikiPage | undefined {
+  return getAllPages(lang).find((p) => p.slug === slug);
 }
 
 export interface SidebarSection {
@@ -171,11 +180,56 @@ export interface SidebarSection {
   pages: { slug: string; title: string }[];
 }
 
-export function getSidebarSections(): SidebarSection[] {
+/** 侧边栏：本语言实际存在的页面 */
+export function getSidebarSections(lang: Locale): SidebarSection[] {
   const sections = new Map<string, { slug: string; title: string }[]>();
-  for (const page of getAllPages()) {
+  for (const page of getAllPages(lang)) {
     if (!sections.has(page.section)) sections.set(page.section, []);
     sections.get(page.section)!.push({ slug: page.slug, title: page.frontmatter.title });
   }
   return [...sections.entries()].map(([name, pages]) => ({ name, pages }));
+}
+
+export interface CrossLanguageEntry {
+  slug: string;
+  section: string;
+  /** 目录卡片标题：优先英文原题（跨语言最通用），原创篇退回 zh 标题 */
+  displayTitle: string;
+  sourceUrl?: string;
+  /** 各语言是否有本页 */
+  available: Partial<Record<Locale, boolean>>;
+}
+
+/**
+ * 跨语言总索引（master list）：所有语言页面的并集。
+ * 默认语言目录页用它补齐"本语言暂无、外链原文/其他语言版本"的卡片，
+ * 保证三语目录的信息量一致，而不是各语言的子集。
+ */
+export function getCrossLanguageIndex(): CrossLanguageEntry[] {
+  const map = new Map<string, CrossLanguageEntry>();
+  const zhTitleBySlug = new Map<string, string>();
+
+  for (const lang of LOCALES) {
+    for (const page of getAllPages(lang)) {
+      const existing = map.get(page.slug);
+      if (existing) {
+        existing.available[lang] = true;
+        continue;
+      }
+      map.set(page.slug, {
+        slug: page.slug,
+        section: page.section,
+        displayTitle: page.frontmatter.original_title ?? page.frontmatter.title,
+        sourceUrl: page.frontmatter.source_url,
+        available: { [lang]: true },
+      });
+    }
+    if (lang === "zh") {
+      for (const page of getAllPages(lang)) {
+        zhTitleBySlug.set(page.slug, page.frontmatter.title);
+      }
+    }
+  }
+
+  return [...map.values()].sort((a, b) => a.section.localeCompare(b.section));
 }

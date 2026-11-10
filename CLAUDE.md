@@ -36,13 +36,28 @@ e-ink.me 主站的内容纵深板块，独立仓库、独立子域 **wiki.e-ink.
 
 ## 技术决策
 
+- **三语 i18n（2026-11-10 拍板，依据 e-ink.me 访问数据：en 56.6% / zh 25.6% / es 5.3%）**：
+  默认语言 **en 无 URL 前缀**（`/`、`/wiki/...`），zh/es 带前缀（`/zh/`、`/es/`）；
+  内容按语言分仓 `content/<lang>/<分类>/<页面>.md`，**同 slug 跨语言对齐**；
+  三组 root layout（`(en)` route group + `zh/` + `es/` 字面量目录，各自
+  `<html lang>`），共用 `SiteShell`；语言切换器是客户端组件（layout 拿不到
+  页面 slug，用 `usePathname` + 各语言 slug 清单算目标 URL，无对应页则落
+  目标语言首页，静态导出下永不 404）
+- **翻译篇不做 en 版**（英文读者直接读 MobileRead 原文）：en/es 目录页用
+  "原文外链卡片"补齐全集（数据来自 `getCrossLanguageIndex()`），不造 thin-content stub 页
+- **frontmatter 无引号值含 `: ` 会让 YAML 解析失败**（js-yaml 报错不带文件名）——
+  title/description 含冒号时必须加引号
+- **静态导出无 middleware/redirects**：默认语言只能靠"en 无前缀"的路由结构表达，
+  不能做 Accept-Language 自动跳转（要做得靠 nginx/CF 层）
+
 - **不用第三方 wiki 框架**（MediaWiki/Wiki.js 等）：它们的核心能力
   （在线协作编辑、数据库、页面历史）本项目全不需要；版本历史=git，
   wiki 的形（目录树/侧边栏/署名页脚）用组件实现
 - **Next.js 16 + output: "export" 静态导出**：与 e-ink.me / iloveepub 同栈；
   静态站最轻、天然公开（SA 友好）、部署可进 byos k3s
-- **内容管线**：`content/<分类>/<页面>.md` + gray-matter frontmatter +
-  next-mdx-remote 渲染；frontmatter 契约见 `src/lib/content.ts` 顶部注释
+- **内容管线**：`content/<lang>/<分类>/<页面>.md`（按语言分仓）+
+  gray-matter frontmatter + next-mdx-remote 渲染；
+  frontmatter 契约见 `src/lib/content.ts` 顶部注释
 - **trailingSlash: true**：nginx 目录 index.html 形态
 - `output: "export"` 下 headers()/redirects()/rewrites() 静默失效（iloveepub 同款坑）
 - **路由必须用 `[...slug]` catch-all**：content 路径含 `/`（kindle/jailbreak），
