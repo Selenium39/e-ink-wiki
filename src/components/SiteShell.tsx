@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Script from "next/script";
 import { GithubMark } from "@/components/GithubMark";
+import { LogoMark } from "@/components/LogoMark";
 import Analytics from "@/components/Analytics";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { getAllPages } from "@/lib/content";
@@ -28,8 +29,9 @@ export default function SiteShell({
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-2 px-4">
           <Link
             href={`${localePrefix(lang)}/`}
-            className="text-lg font-bold tracking-tight"
+            className="flex items-center gap-2 text-lg font-bold tracking-tight"
           >
+            <LogoMark className="size-7" />
             E-ink Wiki
           </Link>
           <nav className="flex items-center gap-4 text-sm">

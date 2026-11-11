@@ -1,10 +1,12 @@
 import Link from "next/link";
+import JsonLd from "@/components/JsonLd";
 import {
   getCrossLanguageIndex,
   getSidebarSections,
   type CrossLanguageEntry,
 } from "@/lib/content";
 import { LOCALE_NAME, localePrefix, ui, type Locale } from "@/lib/i18n";
+import { homeJsonLd } from "@/lib/seo";
 
 /** 首页：三语各自导语 + 分类目录（本语言内链 + 原文外链卡片） */
 export default function HomeView({ lang }: { lang: Locale }) {
@@ -21,6 +23,7 @@ export default function HomeView({ lang }: { lang: Locale }) {
 
   return (
     <div className="prose prose-neutral dark:prose-invert mx-auto max-w-3xl">
+      <JsonLd data={homeJsonLd(lang)} />
       <h1>{lang === "zh" ? "电子书 Wiki" : lang === "es" ? "Wiki de libros electrónicos" : "E-book Wiki"}</h1>
 
       {lang === "zh" && (
