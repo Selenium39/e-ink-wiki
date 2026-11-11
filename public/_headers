@@ -1,0 +1,16 @@
+# CF Pages 静态导出：output:"export" 下 headers() 静默失效，用 _headers 文件补齐。
+# 策略对齐 iloveepub 的 nginx 配置（安全头集中 + 分层缓存）。
+# 注 1：多条规则匹配同一路径时 CF Pages 是拼接而非覆盖——/* 若带 Cache-Control，
+#       会和 /_next/static/* 的 immutable 拼出两个 max-age（按 RFC 取第一个），
+#       故 /* 只发安全头，HTML 交给 Pages 默认的 ETag 协商缓存。
+# 注 2：RSC payload（__next.*.txt、各目录 index.txt）跨多层目录，_headers 的
+#       splat 不跨段，无法逐层加 X-Robots-Tag；它们无任何入链，搜索引擎不可达，从略。
+
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
+
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable

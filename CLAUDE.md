@@ -74,11 +74,23 @@ MobileRead 原文原样搬上来：在署名和相同许可下做润色改编（
 - **每完成一个功能即提交并推送 `main`**：先确认 `tsc --noEmit`、`eslint .`、
   `next build` 均通过再 commit，主分支不放不可构建的提交
 
-## 部署（待办）
+## 部署（2026-11-11 已上线：Cloudflare Pages）
 
-- 域名 wiki.e-ink.me → CF → byos k3s ingress（或纯静态托管）
-- ⚠️ CF zone 有"扩展名模板强制边缘缓存"规则，上线后给 wiki 子域配
-  bypass/合理 TTL，更新内容后注意 purge（e-ink 主站同款坑）
+- **CF Pages 直传，不走 byos k3s**（拍板 2026-11-11）：静态站 Pages 最省，
+  顺带绕开 myus prod `readOnly: true` 冻结（Zeabur 2026-12 关停前禁写）；
+  byos 里不建 wiki 服务
+- **部署命令**（手动，token 只在环境变量，不入库）：
+  `pnpm build && CLOUDFLARE_ACCOUNT_ID=cb724477e6943c782c1f69610c60b155 CLOUDFLARE_API_TOKEN=<token> npx wrangler pages deploy out --project-name=e-ink-wiki --branch=main`
+  项目 `e-ink-wiki`，production_branch=main；GitHub Actions 自动部署
+  （repo secret + push main 触发）是待办
+- **域名**：wiki.e-ink.me CNAME → `e-ink-wiki.pages.dev`（proxied），
+  与 games.e-ink.me 同模式；证书 Pages 自动签（CA google）
+- **HTTP 头/缓存走 `public/_headers`**（构建复制进 out/）：output:"export" 下
+  headers() 静默失效。CF Pages 多规则匹配同一路径时**拼接不覆盖**——
+  `/*` 不能带 Cache-Control，否则与 `/_next/static/*` 的 immutable 拼出
+  双 max-age（RFC 取第一个，immutable 失效）；HTML 靠 Pages 默认 ETag 协商
+- ⚠️ CF zone 有"扩展名模板强制边缘缓存"规则（e-ink 主站踩过）——Pages
+  缓存独立于 zone Cache Rules，但更新内容后如见旧内容，用 CF API purge
 - 全站无广告，无付费转化埋点需求
 
 ## 内容工作流（规划）

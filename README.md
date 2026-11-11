@@ -70,3 +70,16 @@ pnpm build  # 静态导出，产物在 out/
 
 Next.js 16（`output: "export"`）+ Tailwind CSS 4 + markdown 内容管线
 （gray-matter + next-mdx-remote），部署为纯静态站。
+
+## 部署
+
+Cloudflare Pages（项目 `e-ink-wiki`，域名 wiki.e-ink.me）：
+
+```bash
+pnpm build
+CLOUDFLARE_ACCOUNT_ID=<account> CLOUDFLARE_API_TOKEN=<token> \
+  npx wrangler pages deploy out --project-name=e-ink-wiki --branch=main
+```
+
+HTTP 头与缓存策略在 `public/_headers`（`output: "export"` 下
+`headers()` 静默失效，用 Pages 的 `_headers` 文件替代）。
