@@ -3,7 +3,7 @@ title: "Kindle 5.x software jailbreak (PW2, PW3, KT2, KT3, Voyage, Oasis)"
 original_title: "5 x Jailbreak"
 source_url: https://wiki.mobileread.com/wiki/5_x_Jailbreak
 original_author: "MobileRead Wiki contributors (Coplate, NiLuJe, DaleDe, Monguin, Ilovejedd, Ttx, Katadelos, Nhgbslik, and others; the original Credits also thank knc1, Branch Delay, Geekmaster, eschwartz, Ryccardo, eeeee, ktwombley, kindlefere)"
-translated_at: 2026-11-11
+translated_at: "2026-11-11"
 order: 1
 description: "The factory-firmware software jailbreak for older Kindle touch models: which firmware it still accepts, how to block OTA, check the factory image, and keep the jailbreak across an update."
 ---

@@ -3,7 +3,7 @@ title: "Ebook DRM, in outline"
 original_title: "DRM"
 source_url: https://wiki.mobileread.com/wiki/DRM
 original_author: "MobileRead Wiki contributors (DaleDe, with Mattcutts, Madliu, and others)"
-translated_at: 2026-11-11
+translated_at: "2026-11-11"
 order: 3
 description: "How ebook DRM actually binds a file to a device or an account, which schemes EPUB, PDF, and Kindle use, and the legal line around removing it."
 ---

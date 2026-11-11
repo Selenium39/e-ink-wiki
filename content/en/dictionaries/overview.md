@@ -3,7 +3,7 @@ title: "Dictionaries on e-readers"
 original_title: "Dictionary"
 source_url: https://wiki.mobileread.com/wiki/Dictionary
 original_author: "MobileRead Wiki contributors (DaleDe, Rolgiati, and others, including anonymous editors)"
-translated_at: 2026-11-11
+translated_at: "2026-11-11"
 order: 1
 description: "Why an ebook dictionary is not just a book of definitions, how tap-to-look-up works, and which formats and tools are still worth using in 2026."
 ---

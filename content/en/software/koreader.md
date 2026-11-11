@@ -3,7 +3,7 @@ title: "KOReader"
 original_title: "KOReader"
 source_url: https://wiki.mobileread.com/wiki/KOReader
 original_author: "MobileRead Wiki contributors (DaleDe and others)"
-translated_at: 2026-11-11
+translated_at: "2026-11-11"
 order: 1
 description: "What KOReader is in 2026, which package matches a Kindle, Kobo, PocketBook, or Android device, and how installation differs once a Kindle is already jailbroken."
 ---
