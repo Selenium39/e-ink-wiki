@@ -14,10 +14,10 @@ description: An introduction to BOOX (Onyx) e-readers — how the open Android s
 
 BOOX is the e-reader product line of Onyx International (Guangzhou Wenshi Information Technology). The biggest difference from Kindle and Kobo: **BOOX devices run open Android**, so you can freely install third-party apps — whereas Kindle and Kobo run locked-down firmware. That locked firmware is exactly why the classic jailbreak guides exist:
 
-- Kindle 5.x software jailbreak & Kindle Touch jailbreak (full guides available in [中文](/zh/wiki/kindle/jailbreak/))
-- Kobo Touch / Kobo WiFi hacking (full guides available in [中文](/zh/wiki/kobo/hacking/))
+- [Kindle 5.x software jailbreak](/wiki/kindle/jailbreak/) and [Kindle Touch jailbreak](/wiki/kindle/touch-jailbreak/)
+- [Kobo Touch hacking](/wiki/kobo/hacking/) and [Kobo WiFi hacking](/wiki/kobo/wifi-hacking/)
 
-On a BOOX, most of those "jailbreak" steps are unnecessary: installing a third-party reader (such as [KOReader](https://wiki.mobileread.com/wiki/KOReader), whose Android build installs directly), swapping fonts, or running note and office apps are all natively supported.
+On a BOOX, most of those steps are unnecessary: installing a third-party reader (such as [KOReader](/wiki/software/koreader/), whose Android build installs directly), swapping fonts, or running note and office apps are all natively supported.
 
 Market position: after Kindle withdrew from the Chinese market in 2022–2023, domestic brands filled the gap. According to public reporting, Onyx filed for a Hong Kong IPO in January 2026; its prospectus disclosed ~384,000 high-speed reader units sold in 2024, and some global rankings place BOOX among the top e-reader brands by retail value (see [36Kr](https://m.36kr.com/p/3711180856980230) and [Wallstreetcn](https://wallstreetcn.com/articles/3765411), in Chinese).
 
