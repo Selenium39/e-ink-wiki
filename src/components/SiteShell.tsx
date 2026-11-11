@@ -7,15 +7,14 @@ import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { getAllPages } from "@/lib/content";
 import { familyHref, LOCALES, localePrefix, ui, type Locale } from "@/lib/i18n";
 
+const footerLinkCls =
+  "underline decoration-neutral-300 underline-offset-2 hover:text-neutral-700 dark:hover:text-neutral-200";
+
 /**
  * 全站骨架：header（品牌 / 主站 / GitHub / 语言切换器）+ main + footer + 统计。
  * 三种语言各有一个 root layout（<html lang> 不同），共用本组件。
  * 页脚有一行家族链接（工具站 / 资讯 / 游戏）；header 的工具站链接与之同一地址。
  */
-
-const footerLinkCls =
-  "underline decoration-neutral-300 underline-offset-2 hover:text-neutral-700 dark:hover:text-neutral-200";
-
 export default function SiteShell({
   lang,
   children,
