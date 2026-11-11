@@ -79,10 +79,11 @@ MobileRead 原文原样搬上来：在署名和相同许可下做润色改编（
 - **CF Pages 直传，不走 byos k3s**（拍板 2026-11-11）：静态站 Pages 最省，
   顺带绕开 myus prod `readOnly: true` 冻结（Zeabur 2026-12 关停前禁写）；
   byos 里不建 wiki 服务
-- **部署命令**（手动，token 只在环境变量，不入库）：
-  `pnpm build && CLOUDFLARE_ACCOUNT_ID=cb724477e6943c782c1f69610c60b155 CLOUDFLARE_API_TOKEN=<token> npx wrangler pages deploy out --project-name=e-ink-wiki --branch=main`
-  项目 `e-ink-wiki`，production_branch=main；GitHub Actions 自动部署
-  （repo secret + push main 触发）是待办
+- **部署**：push main 自动触发 GitHub Actions（`.github/workflows/deploy.yml`：
+  pnpm build → `npx wrangler@4 pages deploy out`），凭证是 repo secret
+  `CLOUDFLARE_API_TOKEN`；手动补发用 workflow_dispatch 或本地跑
+  `CLOUDFLARE_ACCOUNT_ID=cb724477e6943c782c1f69610c60b155 CLOUDFLARE_API_TOKEN=<token> npx wrangler pages deploy out --project-name=e-ink-wiki --branch=main`
+  项目 `e-ink-wiki`，production_branch=main
 - **域名**：wiki.e-ink.me CNAME → `e-ink-wiki.pages.dev`（proxied），
   与 games.e-ink.me 同模式；证书 Pages 自动签（CA google）
 - **HTTP 头/缓存走 `public/_headers`**（构建复制进 out/）：output:"export" 下
