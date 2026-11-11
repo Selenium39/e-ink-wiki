@@ -48,7 +48,7 @@ export const ui = {
     availableIn: (lang: string) => `Full version in ${lang}`,
     categories: "Browse by topic",
     footerLicense:
-      "Content under CC BY-NC-SA 3.0 (selected translations from MobileRead Wiki and original articles)",
+      "Content under CC BY-NC-SA 3.0 (updated adaptations of MobileRead Wiki and original articles)",
     footerNoAds: "No ads",
     footerSource: "Source code",
     notFoundTitle: "Page not found",

@@ -38,12 +38,13 @@ export default function HomeView({ lang }: { lang: Locale }) {
         <p>
           A knowledge base for e-books: jailbreaking and configuring reading devices
           (Kindle / Kobo / BOOX), e-book formats (EPUB / MOBI / DRM), dictionary
-          making, and reading software. Curated translations from{" "}
+          making, and reading software. The English articles are updated adaptations of{" "}
           <a href="https://wiki.mobileread.com/" target="_blank" rel="noopener noreferrer">
             MobileRead Wiki
-          </a>{" "}
-          — plus original coverage of topics the English community lacks
-          (BOOX guides, CJK typography, Chinese dictionary making).
+          </a>
+          : rewritten, with stale firmware limits called out, not a mirror of the
+          original pages. Original pieces cover what that wiki does not (BOOX, and
+          over time CJK typography and Chinese dictionaries).
         </p>
       )}
       {lang === "es" && (
@@ -61,7 +62,7 @@ export default function HomeView({ lang }: { lang: Locale }) {
 
       <p className="text-sm">
         {lang === "zh" && <>翻译内容署名原作者、原创内容署名作者，均以{" "}</>}
-        {lang === "en" && <>Translations credit their original authors, originals their authors — all under{" "}</>}
+        {lang === "en" && <>Adaptations credit the original authors, original pieces their authors — all under{" "}</>}
         {lang === "es" && <>Las traducciones citan a sus autores originales y los originales a sus autores; todo bajo{" "}</>}
         <a
           href="https://creativecommons.org/licenses/by-nc-sa/3.0/"

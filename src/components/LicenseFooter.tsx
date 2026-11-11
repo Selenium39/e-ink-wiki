@@ -5,6 +5,7 @@ import type { Locale } from "@/lib/i18n";
  * 页脚许可声明——合规义务的落点，每篇必带，按页面语言渲染。
  * 翻译篇（type 缺省 "translated"）：BY 署名原作者 + 原文链接，
  *   SA 声明本翻译同样以 CC BY-NC-SA 3.0 发布。
+ *   英文是润色改编，页脚写 Adapted and updated，不写 Translated。
  * 原创篇（type: "original"）：署名创作者，同样以 CC BY-NC-SA 3.0 发布。
  */
 export default function LicenseFooter({
@@ -68,14 +69,16 @@ export default function LicenseFooter({
           )}
           {lang === "en" && (
             <>
-              Translated from{" "}
+              Adapted and updated from{" "}
               <a href={fm.source_url} target="_blank" rel="noopener noreferrer" className={linkCls}>
                 MobileRead Wiki
                 {fm.original_title ? ` “${fm.original_title}”` : ""}
               </a>
               {fm.original_author ? `, original by ${fm.original_author}` : ""}
-              {fm.translated_at ? `, translated on ${fm.translated_at}` : ""}. Both the
-              original and this translation are published under {cc("CC BY-NC-SA 3.0")}.
+              {fm.translated_at ? `, this edition dated ${fm.translated_at}` : ""}.
+              Wording and structure are revised, and outdated limits are marked in the
+              article. Both the original and this edition are published under{" "}
+              {cc("CC BY-NC-SA 3.0")}.
             </>
           )}
           {lang === "es" && (

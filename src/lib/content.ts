@@ -14,7 +14,11 @@ import { DEFAULT_LOCALE, LOCALES, type Locale } from "@/lib/i18n";
  *   original_title   原文标题
  *   source_url       原文地址 https://wiki.mobileread.com/wiki/...
  *   original_author  原作者（CC BY 署名义务，必填）
- *   translated_at    翻译日期 YYYY-MM-DD
+ *   translated_at    译本或英文润色版的日期 YYYY-MM-DD
+ *
+ * 英文仓里的翻译篇是润色改编（重组、改写、标明过时范围），不是把
+ * MobileRead 原文逐段搬过来，也不是从中文再译一遍。契约与中西文译文
+ * 相同，页脚按语言写成 “Adapted and updated from”。
  *
  * 原创篇（type: "original"）：
  *   title            页面标题（目标语言）

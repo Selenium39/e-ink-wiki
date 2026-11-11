@@ -11,8 +11,10 @@ e-ink.me 主站的内容纵深板块，独立仓库、独立子域 **wiki.e-ink.
 翻译篇之外逐步增加原创篇目（优先 MobileRead 没有的中文特有主题：
 中文排版/字体、中文词典制作、新机型现状），管线按 frontmatter
 `type: translated | original` 区分（契约见 `src/lib/content.ts` 顶部注释）。
-原创篇同以 CC BY-NC-SA 3.0 发布；多语言暂缓，等原创成规模后
-只给原创内容开英文版（翻译篇英文版无意义，英文读者读原文）。
+原创篇同以 CC BY-NC-SA 3.0 发布。翻译篇的英文版不是重译，也不是把
+MobileRead 原文原样搬上来：在署名和相同许可下做润色改编（重组结构、
+改写表述、文首标明过时范围），英文读者留在本站。只写在论坛里、
+不在 wiki 上的新越狱步骤仍然不收。西语篇维持译文。
 
 选址拍板（2026-11-10）：e-ink.me 而非 iloveepub.com——
 受众匹配（电纸书玩家）、老域名权重、AdSense 域级隔离、深度内容归深度站。
@@ -43,8 +45,11 @@ e-ink.me 主站的内容纵深板块，独立仓库、独立子域 **wiki.e-ink.
   `<html lang>`），共用 `SiteShell`；语言切换器是客户端组件（layout 拿不到
   页面 slug，用 `usePathname` + 各语言 slug 清单算目标 URL，无对应页则落
   目标语言首页，静态导出下永不 404）
-- **翻译篇不做 en 版**（英文读者直接读 MobileRead 原文）：en/es 目录页用
-  "原文外链卡片"补齐全集（数据来自 `getCrossLanguageIndex()`），不造 thin-content stub 页
+- **翻译篇的英文版是站内润色改编**（`content/en/`，frontmatter 仍用翻译篇
+  契约：`original_author` + `source_url`）。不把英文读者外链到 MobileRead，
+  也不做与原文逐段相同的镜像，更不造只有标题的薄页。过时步骤在文首写明
+  适用的机型与固件；论坛帖里的新越狱流程不写入本站。某语言还没有对应页时，
+  目录仍用 `getCrossLanguageIndex()` 的原文外链卡片补齐
 - **frontmatter 无引号值含 `: ` 会让 YAML 解析失败**（js-yaml 报错不带文件名）——
   title/description 含冒号时必须加引号
 - **静态导出无 middleware/redirects**：默认语言只能靠"en 无前缀"的路由结构表达，
