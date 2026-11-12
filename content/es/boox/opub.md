@@ -3,7 +3,7 @@ title: "OPUB: el archivo de libro del BOOX Picco"
 type: original
 author: e-ink.me
 order: 2
-description: "Qué es un archivo OPUB en el BOOX Picco, cómo BOOX Tiles lleva los libros al dispositivo y qué se conserva al leerlo en el navegador o convertirlo a EPUB."
+description: "Qué es un archivo OPUB en el BOOX Picco y cómo BOOX Tiles lleva los libros al dispositivo."
 ---
 
 > Este artículo es contenido original de E-ink Wiki. Los datos del dispositivo y de la transferencia proceden de la [página de producto del Picco](https://shop.boox.com/products/picco) (consultada el 2026-11-12) y de los informes públicos citados al final. BOOX no ha publicado una especificación de este archivo.
@@ -11,7 +11,7 @@ description: "Qué es un archivo OPUB en el BOOX Picco, cómo BOOX Tiles lleva l
 
 ## Qué es OPUB
 
-**OPUB** es el archivo de libro que usa **Picco**, el primer dispositivo de la línea BOOX Tiles. Picco es un lector del tamaño de una tarjeta, de 3,97 pulgadas. No es una de las tablets Android del [panorama de BOOX](/es/wiki/boox/overview/), y no ejecuta NeoReader.
+**OPUB** es el archivo de libro que usa **Picco**, el primer dispositivo de la línea BOOX Tiles. Picco es un lector del tamaño de una tarjeta, de 3,97 pulgadas. No es uno de los dispositivos Android del [panorama de BOOX](/es/wiki/boox/overview/), y no ejecuta NeoReader.
 
 En esos dispositivos Android, un EPUB, un MOBI y los demás formatos que admite NeoReader se abren tal cual. Picco funciona de otra manera. La [página de producto](https://shop.boox.com/products/picco) enumera un conjunto amplio de formatos de documento —EPUB, MOBI, AZW3, AZW, AZW5, FB2 y sus variantes comprimidas, TXT, PDB, PRC, RTF, HTML, XHTML y CHM— y dice que están admitidos **cuando el archivo se transfiere con la app BOOX Tiles o con la web**. Copiar un EPUB tal cual a la tarjeta no es el camino que documenta BOOX.
 
@@ -29,28 +29,9 @@ Esa misma revisión de octubre de 2026 del cuadro de importación señalaba que 
 
 Las imágenes tienen su propia lista en la página de producto (PNG, JPEG, WEBP, BMP, GIF) y usan la misma transferencia. Las tipografías son otra transferencia, no forman parte del archivo del libro.
 
-## Leer un OPUB y convertirlo a EPUB
-
-Un OPUB que ya tenga se puede leer en el navegador en el [sitio de herramientas E-ink](https://e-ink.me/es), y allí también se puede convertir a EPUB.
-
-La lectura se queda en su ordenador. El archivo no se sube, el lector no pide iniciar sesión y no cobra créditos. Es el mismo arreglo que el de los demás lectores de ese sitio.
-
-La conversión también se queda en el ordenador —el archivo no se sube—, pero sí pide iniciar sesión y cuesta 2 créditos. Los demás convertidores de ese sitio funcionan igual.
-
-El EPUB conserva:
-
-- el orden de lectura
-- el índice
-- el texto del cuerpo
-- las imágenes en escala de grises que se pueden decodificar
-
-La primera imagen es la portada. El resto se coloca en una sección de imágenes después del texto.
-
-La conversión no conserva el CSS original del libro, ni devuelve las imágenes a la posición que tenían en el flujo del texto. No escribe el archivo de vuelta en el dispositivo.
-
 ## Lo que esta página no cubre
 
-No hay una especificación pública que citar, así que la página se detiene en el archivo tal como lo encuentra quien lee: el nombre, qué dispositivo lo usa, cómo BOOX Tiles pone un libro en ese dispositivo y qué conserva una lectura local o una conversión a EPUB. No describe los bytes del interior del archivo.
+No hay una especificación pública que citar, así que la página se detiene en el archivo tal como lo encuentra quien lee en el Picco: el nombre, qué dispositivo lo usa y cómo BOOX Tiles pone un libro en ese dispositivo. No describe los bytes del interior del archivo.
 
 ## Fuentes y referencias
 
