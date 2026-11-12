@@ -59,13 +59,17 @@ Los dispositivos BOOX montan actualmente **BOOXOS** (en los tutoriales oficiales
 
 ## NeoReader: el lector oficial
 
-Cada BOOX incorpora de serie su software de lectura propio, **NeoReader**, el núcleo de la experiencia de lectura de estas máquinas:
+Los dispositivos BOOX con Android incorporan de serie su software de lectura propio, **NeoReader**, el núcleo de la experiencia de lectura de esa línea:
 
 - Admite los formatos de libro electrónico principales (PDF / EPUB / MOBI / TXT / DJVU / CBZ, etc.; para los conceptos de formato, véanse los artículos de este sitio sobre [EPUB](/es/wiki/formats/epub/) y [MOBI](/es/wiki/formats/mobi/))
 - Varios niveles de modo de refresco y ajuste del estilo de lectura (tamaño de letra, tipografía, maquetación, márgenes)
 - Reflujo y ajuste de maquetación de documentos PDF / CAJ, lectura a doble página
 - OCR integrado y diccionario en línea, subrayado con resaltado, exportación de notas
 - Optimización a 256 niveles de gris (función de «suavizado de imágenes»)
+
+## Picco y OPUB
+
+Los dispositivos BOOX con Android mencionados arriba no son toda la gama. **Picco**, el primer BOOX Tile, es un lector del tamaño de una tarjeta, de 3,97 pulgadas ([página de producto](https://shop.boox.com/products/picco)). No ejecuta NeoReader. Los libros, las imágenes y las tipografías entran por [BOOX Tiles](https://booxtiles.com/) —la app del teléfono, la web o un cable USB—. Según informes públicos, el libro que guarda el dispositivo es un archivo OPUB. Véase [OPUB](/es/wiki/boox/opub/).
 
 ## Escenarios típicos para usuarios de chino
 
@@ -94,6 +98,7 @@ El sistema Android abierto da a la BOOX varios usos habituales en el contexto ch
 ## Fuentes y referencias
 
 - Web oficial y sitio de soporte oficial de BOOX (zh.boox.com / support.boox.com), consultados el 2026-11-10
+- [Página de producto del BOOX Picco](https://shop.boox.com/products/picco), consultada el 2026-11-12
 - [Kindle 败退，中产捧出 10 亿文石（36氪）](https://m.36kr.com/p/3711180856980230)
 - [崛起于 Kindle 废墟之上，文石仍要面对出海硬仗（华尔街见闻）](https://wallstreetcn.com/articles/3765411)
 - [做到世界第一的"中国版 Kindle"，IPO 反而更难了（亿欧）](https://www.iyiou.com/news/202602051121115)

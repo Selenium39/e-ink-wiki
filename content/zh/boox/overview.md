@@ -59,13 +59,17 @@ BOOX 设备当前搭载 **BOOXOS**（官方教程中以"文石 OS4"指代第 4 �
 
 ## NeoReader：官方阅读器
 
-每台 BOOX 内置自研阅读软件 **NeoReader**，是 BOOX 阅读体验的核心：
+运行安卓的 BOOX 内置自研阅读软件 **NeoReader**，是这一产品线阅读体验的核心：
 
 - 支持主流电子书格式（PDF / EPUB / MOBI / TXT / DJVU / CBZ 等，格式知识见本站 [EPUB](/zh/wiki/formats/epub/) 与 [MOBI](/zh/wiki/formats/mobi/) 详解）
 - 多档刷新模式与阅读样式调整（字号、字体、版式、边距）
 - PDF / CAJ 文档的重排与版式调整、双页阅读
 - 内置 OCR 识别与在线词典、划线高亮、笔记导出
 - 256 灰阶优化（"图片平滑"功能）
+
+## Picco 与 OPUB
+
+上面的安卓设备并不是全部产品。**Picco** 是 BOOX Tiles 系列的第一台机器，3.97 英寸、卡片大小（[商品页](https://shop.boox.com/products/picco)），不运行 NeoReader。书、图片和字体通过 [BOOX Tiles](https://booxtiles.com/) 传进去（手机 App、网页或 USB 线）。公开报道称设备上保存的是 OPUB 文件。详见 [OPUB](/zh/wiki/boox/opub/)。
 
 ## 中文用户的典型场景
 
@@ -94,6 +98,7 @@ BOOX 设备当前搭载 **BOOXOS**（官方教程中以"文石 OS4"指代第 4 �
 ## 参考来源
 
 - BOOX 官网与官方支持站（zh.boox.com / support.boox.com），访问于 2026-11-10
+- [BOOX Picco 商品页](https://shop.boox.com/products/picco)，访问于 2026-11-12
 - [Kindle 败退，中产捧出 10 亿文石（36氪）](https://m.36kr.com/p/3711180856980230)
 - [崛起于 Kindle 废墟之上，文石仍要面对出海硬仗（华尔街见闻）](https://wallstreetcn.com/articles/3765411)
 - [做到世界第一的"中国版 Kindle"，IPO 反而更难了（亿欧）](https://www.iyiou.com/news/202602051121115)

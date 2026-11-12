@@ -19,7 +19,7 @@ E-ink.me 主站的内容纵深板块。
 | 分类 | 内容 |
 | --- | --- |
 | Kindle | 5.x 软件越狱（PW2 / PW3 / KT2 / KT3 / KV / KOA）· Touch 越狱、救砖与备份 · 越狱包清单（25 个扩展）· 系统架构与底层访问 · 开发指南（工具链与自制包） |
-| BOOX | 电纸书入门总览（本站原创：产品线 / BOOXOS / NeoReader / 选购对比） |
+| BOOX | 电纸书入门总览（本站原创：产品线 / BOOXOS / NeoReader / 选购对比）· OPUB（Picco 上的书籍文件） |
 | Kobo | Touch 破解入门 · WiFi 破解入门 · eReader 常见问题（16 问） |
 | 词典 | 电纸书词典制作总览 |
 | 阅读软件 | KOReader 简介 |

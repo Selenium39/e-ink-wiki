@@ -59,13 +59,17 @@ Current BOOX devices ship with **BOOXOS** ("OS4" in official tutorials), customi
 
 ## NeoReader: the built-in reader
 
-Every BOOX ships with **NeoReader**, the core of the reading experience:
+Android BOOX devices ship with **NeoReader**, the core of the reading experience on that line:
 
 - Broad format support (PDF / EPUB / MOBI / TXT / DJVU / CBZ and more — see the [EPUB](https://wiki.mobileread.com/wiki/EPub) and [MOBI](https://wiki.mobileread.com/wiki/MOBI) format guides on MobileRead Wiki)
 - Multiple refresh modes and reading-layout adjustment (font size, typeface, margins)
 - Reflow and layout adjustment for PDF / CAJ documents, two-page reading
 - Built-in OCR, online dictionaries, highlights, and note export
 - 256-level grayscale ("image smoothing") optimization
+
+## Picco and OPUB
+
+The Android devices above are not the whole lineup. **Picco**, the first BOOX Tile, is a 3.97-inch card-sized reader ([product page](https://shop.boox.com/products/picco)). It does not run NeoReader. Books, images, and fonts go on through [BOOX Tiles](https://booxtiles.com/) — the phone app, the website, or a USB cable. Public reporting calls the stored book an OPUB file. See [OPUB](/wiki/boox/opub/).
 
 ## Typical use cases
 
@@ -94,6 +98,7 @@ The open Android system enables a few common workflows:
 ## References
 
 - BOOX official site and support center (zh.boox.com / support.boox.com), accessed 2026-11-10
+- [BOOX Picco product page](https://shop.boox.com/products/picco), accessed 2026-11-12
 - [Kindle retreats, and the middle class lifts Onyx to ¥1B (36Kr, Chinese)](https://m.36kr.com/p/3711180856980230)
 - [Onyx rises from Kindle's ruins, but faces an overseas battle (Wallstreetcn, Chinese)](https://wallstreetcn.com/articles/3765411)
 - [The "Chinese Kindle" that became world No.1, yet finds IPO harder (iyiou, Chinese)](https://www.iyiou.com/news/202602051121115)
