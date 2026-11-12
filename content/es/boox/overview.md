@@ -59,13 +59,17 @@ Los dispositivos BOOX montan actualmente **BOOXOS** (en los tutoriales oficiales
 
 ## NeoReader: el lector oficial
 
-Cada BOOX incorpora de serie su software de lectura propio, **NeoReader**, el núcleo de la experiencia de lectura de estas máquinas:
+Los dispositivos BOOX con Android incorporan de serie su software de lectura propio, **NeoReader**, el núcleo de la experiencia de lectura de esa línea:
 
 - Admite los formatos de libro electrónico principales (PDF / EPUB / MOBI / TXT / DJVU / CBZ, etc.; para los conceptos de formato, véanse los artículos de este sitio sobre [EPUB](/es/wiki/formats/epub/) y [MOBI](/es/wiki/formats/mobi/))
 - Varios niveles de modo de refresco y ajuste del estilo de lectura (tamaño de letra, tipografía, maquetación, márgenes)
 - Reflujo y ajuste de maquetación de documentos PDF / CAJ, lectura a doble página
 - OCR integrado y diccionario en línea, subrayado con resaltado, exportación de notas
 - Optimización a 256 niveles de gris (función de «suavizado de imágenes»)
+
+## Picco y OPUB
+
+Las tablets Android de arriba no son toda la gama. **Picco**, el primer BOOX Tile, es un lector del tamaño de una tarjeta, de 3,97 pulgadas. No ejecuta NeoReader. Los libros, las imágenes y las tipografías entran por [BOOX Tiles](https://booxtiles.com/) —la app del teléfono, la web o un cable USB—, y el libro que guarda el dispositivo es un archivo OPUB. Véase [OPUB](/es/wiki/boox/opub/).
 
 ## Escenarios típicos para usuarios de chino
 
