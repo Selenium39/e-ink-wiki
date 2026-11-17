@@ -6,7 +6,7 @@ order: 2
 description: "OPUB 是什么：BOOX Picco 上的书籍文件，以及 BOOX Tiles 怎样把书放进设备。"
 ---
 
-> 本文为 E-ink Wiki 原创内容。设备与传书事实来自 [Picco 商品页](https://shop.boox.com/products/picco)（访问于 2026-11-12）以及文末列出的公开报道。BOOX 没有公布这一文件的格式规范。
+> 本文为 Inkme Wiki 原创内容。设备与传书事实来自 [Picco 商品页](https://shop.boox.com/products/picco)（访问于 2026-11-12）以及文末列出的公开报道。BOOX 没有公布这一文件的格式规范。
 > Picco 是新的产品线，传书步骤可能调整。动手之前请以 [booxtiles.com](https://booxtiles.com/) 和商品页的最新说明为准。
 
 ## OPUB 是什么

@@ -1,11 +1,12 @@
 import type { MetadataRoute } from "next";
+import { SITE_NAME } from "@/lib/i18n";
 
 export const dynamic = "force-static";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "E-ink Wiki",
-    short_name: "E-ink Wiki",
+    name: SITE_NAME,
+    short_name: SITE_NAME,
     description: "E-book wiki for devices, formats, and reading software.",
     start_url: "/",
     scope: "/",

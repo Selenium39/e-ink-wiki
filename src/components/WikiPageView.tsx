@@ -7,7 +7,7 @@ import LicenseFooter from "@/components/LicenseFooter";
 import Figure from "@/components/Figure";
 import JsonLd from "@/components/JsonLd";
 import { getPageBySlug } from "@/lib/content";
-import { HTML_LANG, type Locale } from "@/lib/i18n";
+import { HTML_LANG, SITE_NAME, type Locale } from "@/lib/i18n";
 import {
   absoluteUrl,
   languageAlternates,
@@ -62,7 +62,7 @@ export async function WikiPageView({
                 {
                   "@type": "ListItem",
                   position: 1,
-                  name: "E-ink Wiki",
+                  name: SITE_NAME,
                   item: absoluteUrl(pagePath(lang)),
                 },
                 {

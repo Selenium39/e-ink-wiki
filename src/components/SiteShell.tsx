@@ -5,15 +5,23 @@ import { LogoMark } from "@/components/LogoMark";
 import Analytics from "@/components/Analytics";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { getAllPages } from "@/lib/content";
-import { familyHref, LOCALES, localePrefix, ui, type Locale } from "@/lib/i18n";
+import {
+  familyHref,
+  LOCALES,
+  localePrefix,
+  SITE_NAME,
+  ui,
+  type Locale,
+} from "@/lib/i18n";
 
 const footerLinkCls =
   "underline decoration-neutral-300 underline-offset-2 hover:text-neutral-700 dark:hover:text-neutral-200";
 
 /**
- * 全站骨架：header（品牌 / 主站 / GitHub / 语言切换器）+ main + footer + 统计。
+ * 全站骨架：header（品牌 / Inkme / GitHub / 语言切换器）+ main + footer + 统计。
  * 三种语言各有一个 root layout（<html lang> 不同），共用本组件。
- * 页脚有一行家族链接（工具站 / 资讯 / 游戏）；header 的工具站链接与之同一地址。
+ * 页脚有一行家族链接（Inkme / News / Games / Nav / Wiki）；
+ * header 的 Inkme 链接与页脚第一项同一地址。
  */
 export default function SiteShell({
   lang,
@@ -23,6 +31,13 @@ export default function SiteShell({
   children: React.ReactNode;
 }) {
   const t = ui[lang];
+  const familyLinks = [
+    { href: familyHref("inkme"), label: t.familyInkme },
+    { href: familyHref("news"), label: t.familyNews },
+    { href: familyHref("games"), label: t.familyGames },
+    { href: familyHref("nav"), label: t.familyNavLink },
+    { href: familyHref("wiki"), label: t.familyWiki },
+  ];
   const slugMap = Object.fromEntries(
     LOCALES.map((l) => [l, getAllPages(l).map((p) => p.slug)]),
   ) as Record<Locale, string[]>;
@@ -36,15 +51,15 @@ export default function SiteShell({
             className="flex items-center gap-2 text-lg font-bold tracking-tight"
           >
             <LogoMark className="size-7" />
-            E-ink Wiki
+            {SITE_NAME}
           </Link>
           <nav className="flex items-center gap-4 text-sm">
             {/* 普通导航链接回主站（非商业 CTA，保持 wiki 非商业性质） */}
             <a
-              href={familyHref("tools", lang)}
+              href={familyHref("inkme")}
               className="hidden text-neutral-600 hover:text-neutral-900 sm:block dark:text-neutral-400 dark:hover:text-neutral-100"
             >
-              {t.navMainSite}
+              {t.familyInkme}
             </a>
             <a
               href="https://github.com/Selenium39/e-ink-wiki"
@@ -62,19 +77,16 @@ export default function SiteShell({
       <main className="mx-auto max-w-6xl px-4 py-8">{children}</main>
       <footer className="border-t border-neutral-200 py-6 text-center text-xs text-neutral-500 dark:border-neutral-800 dark:text-neutral-400">
         <nav aria-label={t.familyNav} className="mb-2">
-          <a href={familyHref("tools", lang)} className={footerLinkCls}>
-            {t.navMainSite}
-          </a>
-          {" · "}
-          <a href={familyHref("news", lang)} className={footerLinkCls}>
-            {t.familyNews}
-          </a>
-          {" · "}
-          <a href={familyHref("games", lang)} className={footerLinkCls}>
-            {t.familyGames}
-          </a>
+          {familyLinks.map((link, index) => (
+            <span key={link.href}>
+              {index > 0 && " · "}
+              <a href={link.href} className={footerLinkCls}>
+                {link.label}
+              </a>
+            </span>
+          ))}
         </nav>
-        E-ink Wiki · {t.footerLicense} · {t.footerNoAds} ·{" "}
+        {SITE_NAME} · {t.footerLicense} · {t.footerNoAds} ·{" "}
         <a
           href="https://github.com/Selenium39/e-ink-wiki"
           target="_blank"

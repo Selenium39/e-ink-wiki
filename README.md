@@ -1,4 +1,4 @@
-# E-ink Wiki
+# Inkme Wiki
 
 电子书 Wiki / E-book Wiki —— [wiki.e-ink.me](https://wiki.e-ink.me)
 
@@ -6,7 +6,7 @@
 （EPUB / MOBI / DRM）、词典制作、阅读软件。内容双轨——精选翻译
 [MobileRead Wiki](https://wiki.mobileread.com/) 的深度教程，并收录本站原创
 （BOOX 专题、中文排版、中文词典制作等英文社区缺失的主题）。
-E-ink.me 主站的内容纵深板块。
+Inkme 主站（e-ink.me）的内容纵深板块。
 
 **多语言**：默认英文（无 URL 前缀），中文 `/zh/`、西语 `/es/` 带前缀——
 语言覆盖依据主站真实访问数据（en 56.6% / zh 25.6% / es 5.3%）。

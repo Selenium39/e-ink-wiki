@@ -6,7 +6,7 @@ order: 2
 description: "Qué es un archivo OPUB en el BOOX Picco y cómo BOOX Tiles lleva los libros al dispositivo."
 ---
 
-> Este artículo es contenido original de E-ink Wiki. Los datos del dispositivo y de la transferencia proceden de la [página de producto del Picco](https://shop.boox.com/products/picco) (consultada el 2026-11-12) y de los informes públicos citados al final. BOOX no ha publicado una especificación de este archivo.
+> Este artículo es contenido original de Inkme Wiki. Los datos del dispositivo y de la transferencia proceden de la [página de producto del Picco](https://shop.boox.com/products/picco) (consultada el 2026-11-12) y de los informes públicos citados al final. BOOX no ha publicado una especificación de este archivo.
 > Picco es una línea nueva. Los pasos de transferencia pueden cambiar; antes de seguir uno, compruebe [booxtiles.com](https://booxtiles.com/) y la página de producto.
 
 ## Qué es OPUB

@@ -1,5 +1,5 @@
 import type { WikiFrontmatter } from "@/lib/content";
-import type { Locale } from "@/lib/i18n";
+import { SITE_NAME, type Locale } from "@/lib/i18n";
 
 /**
  * 页脚许可声明——合规义务的落点，每篇必带，按页面语言渲染。
@@ -34,20 +34,20 @@ export default function LicenseFooter({
         <p>
           {lang === "zh" && (
             <>
-              本文为 E-ink Wiki 原创内容{fm.author ? `，作者 ${fm.author}` : ""}，以{" "}
+              本文为 {SITE_NAME} 原创内容{fm.author ? `，作者 ${fm.author}` : ""}，以{" "}
               {cc("CC BY-NC-SA 3.0")} 许可发布。
             </>
           )}
           {lang === "en" && (
             <>
-              This article is original content by E-ink Wiki
+              This article is original content by {SITE_NAME}
               {fm.author ? `, written by ${fm.author}` : ""}, published under{" "}
               {cc("CC BY-NC-SA 3.0")}.
             </>
           )}
           {lang === "es" && (
             <>
-              Este artículo es contenido original de E-ink Wiki
+              Este artículo es contenido original de {SITE_NAME}
               {fm.author ? `, escrito por ${fm.author}` : ""}, publicado bajo{" "}
               {cc("CC BY-NC-SA 3.0")}.
             </>

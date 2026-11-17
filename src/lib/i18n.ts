@@ -13,6 +13,9 @@ export const LOCALES = ["en", "zh", "es"] as const;
 export type Locale = (typeof LOCALES)[number];
 export const DEFAULT_LOCALE: Locale = "en";
 
+/** 可见站名。域名仍是 wiki.e-ink.me，仓库名不改。 */
+export const SITE_NAME = "Inkme Wiki";
+
 /** <html lang> 值 */
 export const HTML_LANG: Record<Locale, string> = {
   en: "en",
@@ -38,43 +41,32 @@ export function isLocale(value: string): value is Locale {
 }
 
 /**
- * 家族站点（不含 wiki 自身）。各站语言路径形状不同，不能套本站 localePrefix：
- * - e-ink.me：/en /zh /es，无尾斜杠（带斜杠会被 308 剥掉）
- * - news.e-ink.me：/en /zh，无尾斜杠；根路径是错误页，canonical 在 /en。没有西语，es 落到英文版
- * - games.e-ink.me：/en/ /zh/ /es/，保留尾斜杠
- * 不带 UTM，也不加 nofollow。
+ * 家族站点。页脚三语共用这一组根地址和品牌名，不带语言前缀、UTM 或 nofollow。
+ * 顺序：Inkme、Inkme News、Inkme Games、Inkme Nav、Inkme Wiki。
  */
 export const familySites = {
-  tools: {
-    en: "https://e-ink.me/en",
-    zh: "https://e-ink.me/zh",
-    es: "https://e-ink.me/es",
-  },
-  news: {
-    en: "https://news.e-ink.me/en",
-    zh: "https://news.e-ink.me/zh",
-    es: "https://news.e-ink.me/en",
-  },
-  games: {
-    en: "https://games.e-ink.me/en/",
-    zh: "https://games.e-ink.me/zh/",
-    es: "https://games.e-ink.me/es/",
-  },
+  inkme: "https://e-ink.me",
+  news: "https://news.e-ink.me",
+  games: "https://games.e-ink.me",
+  nav: "https://nav.e-ink.me",
+  wiki: "https://wiki.e-ink.me",
 } as const;
 
 export type FamilySite = keyof typeof familySites;
 
-export function familyHref(site: FamilySite, lang: Locale): string {
-  return familySites[site][lang];
+export function familyHref(site: FamilySite): string {
+  return familySites[site];
 }
 
 /** 短 UI 标签（涉及链接与长句的文案在使用组件内按 lang 分支） */
 export const ui = {
   en: {
-    navMainSite: "E-ink Tools",
-    familyNews: "E-ink News",
-    familyGames: "E-ink Games",
-    familyNav: "E-ink family",
+    familyInkme: "Inkme",
+    familyNews: "Inkme News",
+    familyGames: "Inkme Games",
+    familyNavLink: "Inkme Nav",
+    familyWiki: "Inkme Wiki",
+    familyNav: "Inkme sites",
     navGitHub: "GitHub",
     sidebarNav: "Contents",
     fromMobileRead: "From MobileRead Wiki (original)",
@@ -90,10 +82,12 @@ export const ui = {
     goHome: "Go to homepage",
   },
   zh: {
-    navMainSite: "E-ink 工具站",
-    familyNews: "E-ink 资讯",
-    familyGames: "E-ink 游戏",
-    familyNav: "E-ink 家族站点",
+    familyInkme: "Inkme",
+    familyNews: "Inkme News",
+    familyGames: "Inkme Games",
+    familyNavLink: "Inkme Nav",
+    familyWiki: "Inkme Wiki",
+    familyNav: "Inkme 站点",
     navGitHub: "GitHub",
     sidebarNav: "目录",
     fromMobileRead: "译自 MobileRead Wiki（原文）",
@@ -109,10 +103,12 @@ export const ui = {
     goHome: "返回首页",
   },
   es: {
-    navMainSite: "Herramientas E-ink",
-    familyNews: "Noticias E-ink",
-    familyGames: "Juegos E-ink",
-    familyNav: "Familia E-ink",
+    familyInkme: "Inkme",
+    familyNews: "Inkme News",
+    familyGames: "Inkme Games",
+    familyNavLink: "Inkme Nav",
+    familyWiki: "Inkme Wiki",
+    familyNav: "Sitios Inkme",
     navGitHub: "GitHub",
     sidebarNav: "Índice",
     fromMobileRead: "De MobileRead Wiki (original)",

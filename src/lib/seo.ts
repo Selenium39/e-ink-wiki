@@ -5,6 +5,7 @@ import {
   HTML_LANG,
   LOCALES,
   localePrefix,
+  SITE_NAME,
   type Locale,
 } from "@/lib/i18n";
 
@@ -24,9 +25,9 @@ const OG_LOCALE: Record<Locale, string> = {
 };
 
 const OG_ALT: Record<Locale, string> = {
-  en: "E-ink Wiki, an e-book knowledge base",
-  zh: "E-ink Wiki 电子书知识库",
-  es: "E-ink Wiki, una base de conocimientos sobre libros electrónicos",
+  en: `${SITE_NAME}, an e-book knowledge base`,
+  zh: `${SITE_NAME} 电子书知识库`,
+  es: `${SITE_NAME}, una base de conocimientos sobre libros electrónicos`,
 };
 
 export const siteViewport: Viewport = {
@@ -97,7 +98,7 @@ export function openGraphFor(
 ): NonNullable<Metadata["openGraph"]> {
   return {
     type,
-    siteName: "E-ink Wiki",
+    siteName: SITE_NAME,
     url: pathname,
     locale: OG_LOCALE[lang],
     alternateLocale: LOCALES.filter((item) => item !== lang).map(
@@ -114,16 +115,16 @@ export function rootMetadata(lang: Locale): Metadata {
     title: {
       default:
         lang === "zh"
-          ? "E-ink Wiki — 电子书 Wiki"
+          ? `${SITE_NAME} — 电子书 Wiki`
           : lang === "es"
-            ? "E-ink Wiki — Wiki de libros electrónicos"
-            : "E-ink Wiki — E-book Wiki",
-      template: "%s — E-ink Wiki",
+            ? `${SITE_NAME} — Wiki de libros electrónicos`
+            : `${SITE_NAME} — E-book Wiki`,
+      template: `%s — ${SITE_NAME}`,
     },
     description: DESCRIPTION[lang],
-    applicationName: "E-ink Wiki",
-    authors: [{ name: "E-ink Wiki", url: SITE_URL }],
-    creator: "E-ink Wiki",
+    applicationName: SITE_NAME,
+    authors: [{ name: SITE_NAME, url: SITE_URL }],
+    creator: SITE_NAME,
     icons: {
       icon: [
         { url: "/favicon.ico", sizes: "48x48" },
@@ -167,7 +168,7 @@ export function homeJsonLd(lang: Locale): Record<string, unknown> {
       {
         "@type": "WebSite",
         "@id": `${SITE_URL}/#website`,
-        name: "E-ink Wiki",
+        name: SITE_NAME,
         url: absoluteUrl(pagePath(lang)),
         description: DESCRIPTION[lang],
         inLanguage: LOCALES.map((item) => HTML_LANG[item]),
@@ -176,7 +177,7 @@ export function homeJsonLd(lang: Locale): Record<string, unknown> {
       {
         "@type": "Organization",
         "@id": `${SITE_URL}/#organization`,
-        name: "E-ink Wiki",
+        name: SITE_NAME,
         url: SITE_URL,
         logo: {
           "@type": "ImageObject",

@@ -6,7 +6,7 @@ order: 1
 description: An introduction to BOOX (Onyx) e-readers — how the open Android system differs from Kindle/Kobo, the current product lines, BOOXOS and NeoReader highlights, typical use cases, and an index of official support resources.
 ---
 
-> This article is original content by E-ink Wiki, compiled from the [official BOOX support site](https://support.boox.com/) and public reporting; specific facts are sourced inline.
+> This article is original content by Inkme Wiki, compiled from the [official BOOX support site](https://support.boox.com/) and public reporting; specific facts are sourced inline.
 > Product lineup and system features are current as of **Nov 2026** — BOOX refreshes its lineup quickly, so check the [official site](https://zh.boox.com/) and support pages for the latest information before buying.
 > The system tutorials mentioned below (refresh modes, file transfer, handwriting, etc.) can all be found in the [official FAQ list](https://support.boox.com/fee6).
 
