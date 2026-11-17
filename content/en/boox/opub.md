@@ -6,7 +6,7 @@ order: 2
 description: "What an OPUB file is on BOOX Picco, and how BOOX Tiles puts a book on the device."
 ---
 
-> This article is original content by E-ink Wiki. The device and transfer facts come from the [Picco product page](https://shop.boox.com/products/picco) (accessed 2026-11-12) and from public reporting cited below. BOOX has not published a specification for this file.
+> This article is original content by Inkme Wiki. The device and transfer facts come from the [Picco product page](https://shop.boox.com/products/picco) (accessed 2026-11-12) and from public reporting cited below. BOOX has not published a specification for this file.
 > Picco is a new product line. Transfer details can change; check [booxtiles.com](https://booxtiles.com/) and the product page before you rely on a step.
 
 ## What OPUB is

@@ -6,7 +6,7 @@ order: 1
 description: "Introducción a los lectores de tinta electrónica BOOX (Onyx): la diferencia esencial frente a Kindle/Kobo que supone su Android abierto, el panorama de la línea oficial de productos (lectoras de alta velocidad y tablets de productividad), las características clave de BOOXOS y NeoReader, los escenarios típicos para lectores de chino y un índice de recursos oficiales de soporte."
 ---
 
-> Este artículo es contenido original de E-ink Wiki, elaborado a partir del [sitio de soporte oficial de BOOX](https://support.boox.com/) y de informes públicos; la fuente de cada dato se indica en el propio texto.
+> Este artículo es contenido original de Inkme Wiki, elaborado a partir del [sitio de soporte oficial de BOOX](https://support.boox.com/) y de informes públicos; la fuente de cada dato se indica en el propio texto.
 > La alineación de dispositivos y las funciones del sistema corresponden a **2026-11**; la línea de productos BOOX evoluciona rápido, así que para decisiones de compra y de uso consulte siempre la información más reciente en la [web oficial](https://zh.boox.com/) y en el sitio de soporte oficial.
 > Los tutoriales de sistema mencionados en el texto (modos de refresco, transferencia de archivos, escritura a mano, etc.) pueden localizarse en esta [lista oficial de preguntas frecuentes](https://support.boox.com/fee6).
 

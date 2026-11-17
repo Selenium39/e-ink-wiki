@@ -46,7 +46,7 @@ const ogSvg = `<?xml version="1.0" encoding="UTF-8"?>
   </g>
   <path d="M560 150v330" stroke="#e3ddd2" stroke-width="2"/>
   <text x="608" y="230" fill="#6f6a64" font-family="Noto Sans" font-size="22" font-weight="700" letter-spacing="5">E-BOOK WIKI</text>
-  <text x="608" y="318" fill="${ink}" font-family="Noto Sans" font-size="78" font-weight="700">E-ink Wiki</text>
+  <text x="608" y="318" fill="${ink}" font-family="Noto Sans" font-size="78" font-weight="700">Inkme Wiki</text>
   <text x="608" y="378" fill="#3c3834" font-family="Noto Sans" font-size="28">Kindle, Kobo, and BOOX</text>
   <text x="608" y="422" fill="#3c3834" font-family="Noto Sans" font-size="28">Formats, dictionaries, reading software</text>
   <text x="608" y="500" fill="#8a847c" font-family="Noto Sans" font-size="22">wiki.e-ink.me</text>

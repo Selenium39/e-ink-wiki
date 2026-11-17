@@ -6,7 +6,7 @@ order: 1
 description: BOOX（文石）电纸书入门：开放安卓系统与 Kindle/Kobo 的本质差异、官方产品线总览（高速阅读器与生产力平板）、BOOXOS 与 NeoReader 核心特性、中文用户典型场景，以及官方支持资源索引。
 ---
 
-> 本文为 E-ink Wiki 原创内容，依据 [BOOX 官方支持站](https://support.boox.com/)与公开报道整理，具体事实均在正文标注来源。
+> 本文为 Inkme Wiki 原创内容，依据 [BOOX 官方支持站](https://support.boox.com/)与公开报道整理，具体事实均在正文标注来源。
 > 机型阵容与系统功能截至 **2026-11**，BOOX 产品线迭代较快，购买与使用决策请以[官网](https://zh.boox.com/)与官方支持站最新信息为准。
 > 文中提及的系统教程（刷新模式、文件传输、手写等）均可在这份[官方常见问题列表](https://support.boox.com/fee6)中检索到。
 
